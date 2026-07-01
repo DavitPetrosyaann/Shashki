@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tactile Mahogany Shashki</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            wood: {
+              light: '#d4a373',
+              dark: '#3e2312',
+              board: '#2a160c',
+              border: '#1a0d07',
+            }
+          },
+          keyframes: {
+            shake: {
+              '0%, 100%': { transform: 'translate3d(0, 0, 0)' },
+              '20%, 60%': { transform: 'translate3d(-4px, 2px, 0) rotate(-1deg)' },
+              '40%, 80%': { transform: 'translate3d(4px, -2px, 0) rotate(1deg)' }
+            },
+            promote: {
+              '0%': { transform: 'scale(0.5)', opacity: '0', filter: 'brightness(2)' },
+              '50%': { transform: 'scale(1.2)', opacity: '1', filter: 'brightness(1.5)' },
+              '100%': { transform: 'scale(1)', opacity: '1', filter: 'brightness(1)' }
+            }
+          },
+          animation: {
+            shake: 'shake 0.25s cubic-bezier(.36,.07,.19,.97) both',
+            promote: 'promote 0.6s ease-out forwards'
+          }
+        }
+      }
+    }
+  </script>
+    <style>
+    body {
+      background-color: #120904;
+      background-image: radial-gradient(circle at center, #2a160c 0%, #0a0502 100%);
+      margin: 0;
+      font-family: system-ui, -apple-system, sans-serif;
+      touch-action: none; /* Prevent scrolling while dragging */
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="./index.tsx"></script>
+<script type="module" src="/index.js"></script></body>
+</html>
