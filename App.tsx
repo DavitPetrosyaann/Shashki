@@ -337,7 +337,7 @@ export default function App() {
       
       {/* Header */}
       <div className="mb-8 text-center z-10">
-        <h1 className="text-4xl md:text-5xl font-serif text-amber-500 tracking-widest drop-shadow-lg mb-2">SHASHKI</h1>
+        <h1 className="text-4xl md:text-5xl font-serif text-amber-500 tracking-widest drop-shadow-lg mb-2">CHECKERS</h1>
         <div className="flex items-center justify-center gap-4 text-xl font-medium text-stone-300">
           <span className={`px-4 py-1 rounded-full transition-colors ${currentTurn === Player.WHITE ? 'bg-amber-900/80 text-amber-200 shadow-[0_0_15px_rgba(251,191,36,0.3)]' : 'opacity-50'}`}>
             White {humanColor === Player.WHITE ? '(You)' : '(AI)'}
